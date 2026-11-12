@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Покупка билета — GUL</title>
+  <meta name="description" content="Купить билет на фестиваль GUL, 18–20 августа 2028.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preload" href="fonts/GNF-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-tickets">
+  <div class="ctls">
+    <button class="ctl ctl--green" id="burger" type="button" data-icon="menu" aria-label="Открыть меню" aria-expanded="false"></button>
+    <a class="ctl ctl--green" href="index.html" data-icon="close" aria-label="Закрыть и вернуться на главную"></a>
+  </div>
+
+  <main class="buy">
+    <a class="buy__brand" href="index.html"><img src="assets/img/лого.png" alt="GUL" width="1684" height="344"><span>фестиваль IDM и славянского фолка</span></a>
+    <h1 class="sr">Покупка билета</h1>
+
+    <form id="buy-form" novalidate>
+      <fieldset class="tickets">
+        <legend class="buy__cat">Категория билета</legend>
+        <label class="ticket">
+          <input type="radio" name="ticket" value="solo">
+          <span class="ticket__face" style="background-image:url('assets/img/1 билет.png')">
+            <span>Один день<br>SOLO</span><span>1 из дней<br>одноразовый<br>QR-код</span><span>2500 рублей</span>
+          </span>
+        </label>
+        <label class="ticket">
+          <input type="radio" name="ticket" value="std" checked>
+          <span class="ticket__face" style="background-image:url('assets/img/2 билет.png')">
+            <span>Стандартный<br>STD</span><span>18-20 августа</span><span>4500 рублей</span>
+          </span>
+        </label>
+        <label class="ticket">
+          <input type="radio" name="ticket" value="vip">
+          <span class="ticket__face" style="background-image:url('assets/img/3 билет.png')">
+            <span>Приоритетный<br>VIP</span><span>18-20 августа<br>мерч + отдельные<br>места кемпинга</span><span>9500 рублей</span>
+          </span>
+        </label>
+      </fieldset>
+
+      <label class="field"><span class="field__label">Ваше имя</span>
+        <input name="name" type="text" autocomplete="name" placeholder="Иван Иванов" required></label>
+      <label class="field"><span class="field__label">Ваш email</span>
+        <input name="email" type="email" inputmode="email" autocomplete="email" placeholder="email@gmail.com" required></label>
+      <label class="field"><span class="field__label">Ваш номер телефона</span>
+        <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 999 888 77 66" required></label>
+
+      <fieldset class="agree">
+        <legend class="sr">Согласия</legend>
+        <label class="check"><input type="checkbox" name="rules"><span class="check__box"></span>Я согласен с правилами фестиваля и условиями возврата</label>
+        <label class="check"><input type="checkbox" name="pd"><span class="check__box"></span>Я согласен на обработку персональных данных</label>
+      </fieldset>
+
+      <div class="pay">
+        <div class="pay__left">
+          <fieldset class="pay__methods">
+            <legend>Выберите метод оплаты</legend>
+            <label class="check"><input type="radio" name="method" value="card"><span class="check__box"></span>Банковская карта</label>
+            <label class="check"><input type="radio" name="method" value="sbp"><span class="check__box"></span>Оплата при помощи СБП</label>
+          </fieldset>
+          <button class="pay__submit" type="submit">Оплатить билет</button>
+          <p class="pay__status" id="buy-status" role="status"></p>
+        </div>
+        <a class="pay__map" href="map.html">Карта расположения парка</a>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

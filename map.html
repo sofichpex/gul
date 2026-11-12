@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Карта фестиваля — GUL</title>
+  <meta name="description" content="Карта фестиваля GUL: сцены, лекторий, фудкорт, кемпинг.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preload" href="fonts/GNF-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-map">
+  <div class="ctls">
+    <button class="ctl" id="burger" type="button" data-icon="menu" aria-label="Открыть меню" aria-expanded="false"></button>
+    <a class="ctl" href="index.html" data-icon="close" aria-label="Закрыть и вернуться на главную"></a>
+  </div>
+
+  <main class="map">
+    <h1 class="sr">Карта фестиваля</h1>
+    <div class="map__stage" id="map-stage">
+      <img class="map__base" src="assets/img/map.png" alt="Карта арт-парка: сцены MAIN и DEPTHS, лекторий WORDS, поляна NIGHTS, фудкорт, кемпинг, туалеты" width="1379" height="920" draggable="false">
+    </div>
+
+    <aside class="place" id="place" aria-live="polite" aria-hidden="true">
+      <div class="place__head">
+        <h2 class="place__title" id="place-title">GUL - MAIN</h2>
+        <img src="assets/img/ТОЧКА.svg" alt="">
+      </div>
+      <div class="place__body" id="place-body"></div>
+      <div class="place__gap" aria-hidden="true"></div>
+      <a class="place__link" id="place-link" href="schedule.html">Смотреть программу →</a>
+    </aside>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ru" class="snap">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GUL — фестиваль IDM и славянского фолка</title>
+  <meta name="description" content="GUL — фестиваль IDM и славянского фолка. 18–20 августа 2028, арт-парк «Тихий Бор», Калужская область.">
+  <meta name="theme-color" content="#0b0f0e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GUL — фестиваль IDM и славянского фолка">
+  <meta property="og:description" content="18–20 августа 2028 · арт-парк «Тихий Бор», Калужская область">
+  <meta property="og:image" content="assets/img/img1.png">
+  <link rel="preload" href="fonts/GNF-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Yantar.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "GUL — фестиваль IDM и славянского фолка",
+    "startDate": "2028-08-18",
+    "endDate": "2028-08-20",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Арт-парк «Тихий Бор»",
+      "address": { "@type": "PostalAddress", "addressRegion": "Калужская область", "addressCountry": "RU" }
+    }
+  }
+  </script>
+</head>
+<body class="page-home">
+  <a class="skip" href="#about">К содержанию</a>
+
+  <div class="ctls ctls--top">
+    <button class="ctl ctl--ghost" id="burger" type="button" data-icon="menu" aria-label="Открыть меню" aria-expanded="false"></button>
+  </div>
+
+  <!-- ============ HERO (видео на весь экран) ============ -->
+  <header class="hero" id="top">
+    <div class="media">
+      <!-- Видео: assets/video/hero.mp4 (для телефонов можно положить облегчённое hero-mobile.mp4) -->
+      <video class="media__video" muted loop playsinline autoplay preload="auto"
+             data-src="assets/video/hero.mp4"
+             data-src-mobile="assets/video/hero-mobile.mp4"
+             aria-hidden="true"></video>
+    </div>
+    <div class="hero__shade"></div>
+
+    <p class="hero__date">18 - 20 августа<br>2028</p>
+
+    <div class="hero__center">
+      <h1 class="hero__logo"><img src="assets/img/лого.png" alt="GUL" width="1684" height="344"></h1>
+      <p class="hero__sub">фестиваль IDM и славянского фолка</p>
+    </div>
+
+    <p class="hero__timer" id="timer" role="timer" aria-label="Время до начала фестиваля">000:00:00:00:000</p>
+  </header>
+
+  <main>
+    <!-- ============ О ФЕСТИВАЛЕ / ЛОКАЦИЯ ============ -->
+    <section class="about" id="about" aria-label="О фестивале">
+      <div class="about__art" role="img" aria-label="Слушай как звучит земля. Лес, деревья, гул. 18.08.28 — 20.08.28"></div>
+      <div class="bar" aria-hidden="true"></div>
+
+      <div class="about__info pattern">
+        <button class="manifest-btn" id="manifest-open" type="button" aria-expanded="false" aria-controls="manifest">[ЧИТАТЬ МАНИФЕСТ]</button>
+
+        <div class="about__blocks">
+          <h2 class="h-info">Локация</h2>
+          <p class="p-info">Арт-парк «Тихий Бор», Калужская область</p>
+
+          <h2 class="h-info">Инфраструктура</h2>
+          <ul class="p-info p-info--list">
+            <li>Сосновый лес и песчаные дороги</li>
+            <li>Три сцены под открытым небом</li>
+            <li>Лекторий в старой деревянной постройке</li>
+            <li>Кемпинг в 5 минутах от сцен</li>
+          </ul>
+
+          <h2 class="h-info">Как добраться</h2>
+          <p class="p-info">Трансфер из Москвы (автобусы) / Парковка для авто</p>
+        </div>
+
+        <a class="btn about__buy" href="tickets.html">купить билет</a>
+
+        <div class="manifest" id="manifest" role="dialog" aria-label="Манифест фестиваля" hidden>
+          <p class="manifest__text">ГУЛ — низкая частота, живущая в лесу. Мы собираем музыкантов на стыке электроники и фольклора: IDM, полевые записи и ритуальный вокал. Цель не соединять старое и новое, а найти третье состояние: дрон как обряд, обряд как танец. Три дня в «Тихом Бору» — это погружение: днём лекции, перформансы и звуковые прогулки, ночью лайвы на трёх сценах, где свет, туман и деревья равноправны с артистами. <span class="hl">Мы встраиваемся в ландшафт и оставляем его нетронутым.</span> ГУЛ слышен даже когда музыка стихает: шум леса, дыхание земли и эхо голосов, звучавших задолго до нас.</p>
+          <button class="close" id="manifest-close" type="button" data-icon="close" aria-label="Закрыть манифест"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ЛАЙНАП ============ -->
+    <section class="lineup" id="lineup" aria-label="Лайнап">
+      <div class="card card--left">
+        <div class="card__photo">
+          <video class="media__video" muted loop playsinline preload="none" data-src="assets/video/video1.mp4" aria-hidden="true"></video>
+        </div>
+        <a class="card__label" href="schedule.html">График сцен</a>
+      </div>
+
+      <a class="lineup__center" href="lineup.html" aria-label="Лайнап 2028 — все артисты">
+        <img src="assets/img/img2.png" alt="LINEUP 2028: 90-ШУМ, Раа-ра, omUT, разрядка, пыль-туман, ИЛ-29, ЭХО-15, Сосновый бор, ветер peremen, вереск, ГАРЬ, НОРА, Новый Завет, Ржавая ZINA, Layer, Стекло, Бетон, дымипар, Глинамесы, ТОНальник" loading="lazy">
+      </a>
+
+      <div class="card card--right">
+        <div class="card__photo">
+          <video class="media__video" muted loop playsinline preload="none" data-src="assets/video/video2.mp4" aria-hidden="true"></video>
+        </div>
+        <a class="card__label" href="lineup.html">Лайнап артистов</a>
+      </div>
+    </section>
+
+    <!-- ============ СЦЕНЫ (слайдер) ============ -->
+    <section class="stages" id="stages" aria-label="Сцены">
+      <div class="stages__panel pattern pattern--2">
+        <h2 class="stages__title" id="stage-title">GUL - MAIN</h2>
+        <p class="stages__text" id="stage-text" aria-live="polite">Большая поляна в сосновом лесу, открытая с одной стороны к небу. Здесь стоит основной свет и звук фестиваля — но без «стадионной» помпы: скорее лесная сцена, собранная из дерева и металла, с минимальным визуальным шумом. MAIN — это вечерние и ночные лайвы, <span class="hl">от дарк-эмбиента и IDM до фолк-рока и техно.</span> Именно здесь проходят закатные сеты и коллективные финалы.</p>
+        <a class="btn stages__map" href="map.html">карта фестиваля</a>
+      </div>
+      <div class="bar" aria-hidden="true"></div>
+      <div class="stages__media" id="stage-media">
+        <div class="stages__img" id="stage-img"></div>
+        <button class="arrow arrow--prev" id="stage-prev" type="button" data-icon="arrow" aria-label="Предыдущая сцена"></button>
+        <button class="arrow arrow--next" id="stage-next" type="button" data-icon="arrow" aria-label="Следующая сцена"></button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ПОДПИСКА + ПОДВАЛ (видео) ============ -->
+  <footer class="finale" id="contacts">
+    <div class="media">
+      <video class="media__video" muted loop playsinline preload="none"
+             data-src="assets/video/footer.mp4"
+             aria-hidden="true"></video>
+    </div>
+    <div class="finale__shade"></div>
+
+    <div class="finale__inner">
+      <div class="sub">
+        <img class="sub__logo" src="assets/img/лого.png" alt="GUL" width="1684" height="344" loading="lazy">
+        <p class="sub__lead">Следите за нами в прямом эфире</p>
+        <button class="btn" id="sub-open" type="button">SUBSCRIBE</button>
+        <form class="sub__form" id="sub-form" novalidate hidden>
+          <label class="sr" for="sub-email">Email</label>
+          <input id="sub-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="email" required>
+          <button class="btn" type="submit">OK</button>
+          <p class="sub__status" id="sub-status" role="status"></p>
+        </form>
+      </div>
+
+      <div class="rule" aria-hidden="true"></div>
+
+      <div class="foot">
+        <div class="foot__col foot__col--left">
+          <p>Почта:<br>
+            <a href="mailto:gulfestival@mail.ru">gulfestival@mail.ru</a><br>
+            <a href="mailto:gulfestival@gmail.ru">gulfestival@gmail.ru</a><br>
+            <a href="mailto:FAQgul@mail.ru">FAQgul@mail.ru</a></p>
+          <p>Телефон:<br>
+            <a href="tel:+79999999090">+7 (999) 999-90-90</a><br>
+            <a href="tel:+79876543210">+7 (987) 654-32-10</a></p>
+        </div>
+
+        <div class="foot__col foot__col--center">
+          <p>Соцсети:</p>
+          <ul class="soc-list">
+            <li><a class="soc" href="#" aria-label="Telegram" rel="noopener"><img src="assets/img/ТГ.svg" alt=""></a></li>
+            <li><a class="soc" href="#" aria-label="ВКонтакте" rel="noopener"><img src="assets/img/ВК.svg" alt=""></a></li>
+            <li><a class="soc" href="#" aria-label="YouTube" rel="noopener"><img src="assets/img/ЮТ.svg" alt=""></a></li>
+          </ul>
+        </div>
+
+        <div class="foot__col foot__col--right">
+          <p>Генеральный спонсор<br>Родник Севера</p>
+          <p>Партнеры:<br>АудиоЛаб<br>СценаТех<br>Межгород<br>ПарКур</p>
+        </div>
+      </div>
+
+      <nav class="legal" aria-label="Документы">
+        <a href="#">Политика конфиденциальности</a><span aria-hidden="true">·</span><a href="#">Оферта</a><span aria-hidden="true">·</span><a href="#">Пресс-кит</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
